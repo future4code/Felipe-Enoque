@@ -25,16 +25,17 @@ button:focus {
     color: white;
 }
 
-img {
-    width: 100px;
-}
+
 
 div>p:first-child {
+    
     display: inline;
+
 }
 
 div img {
-    background: black;
+
+    width: 30px;
 }
 
 .botao-amarelo {
@@ -84,9 +85,18 @@ div img {
     padding: 100px 0;
     font-size: 60px;
 }
+#SEF{
+    min-heigth: 60px;
+
+}
 #tp{
    display: block;
 }
+.texT{
+	text-aligth: center;
+
+}
+
 
 
 /**
@@ -101,7 +111,39 @@ div:last-child {
 }
 
 table {
-    width: 60%;
+    text-align: center;
+    width: 90%;
+}
+#tc{
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+   width: 70px;
+   height: 50px;
+}
+#b1:active{
+   color: white;
+}
+
+#b1:hover{
+   background-color: #635a3d;
+}
+
+#b2:active{
+   color: white;
+}
+
+#b2:hover{
+   background-color: #635a3d;
+}
+
+#b3:active{
+   color: white;
+}
+
+#b3:hover{
+   background-color: #635a3d;
 }
 
 td button {
