@@ -1,0 +1,169 @@
+/*R=1*/
+#pond{
+    display: flex;
+    justify-content: flex-end;
+}
+/*R=2*/
+#pond{
+    display: flex;
+    justify-content: center;
+}
+/*R=3*/
+#pond{
+    display: flex;
+    justify-content:  space-around;
+}
+/*R=4*/
+#pond{
+    display: flex;
+    justify-content: space-between;
+}
+/*R=5*/
+#pond{
+    display: flex;
+    align-items: flex-end;
+}
+/*R=6*/
+#pond{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*R=7*/
+#pond{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+/*R=8*/
+#pond{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*R=9*/
+#pond{
+   display: flex; 
+   flex-direction: column;
+   
+}
+/*R=10*/
+#pond{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+/*R=11*/
+#pond{
+    display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+}
+/*R=12*/
+#pond{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+/*R=13*/
+#pond{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*R=14*/
+#pond {
+  display: flex;
+}
+
+.yellow {
+order: 1;
+}
+
+
+/*R=15*/
+#pond {
+  display: flex;
+}
+
+.red {
+order:-3;
+}
+
+
+/*R=16*/
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+align-self: flex-end;
+}
+
+
+/*R=17*/
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+order: 1;
+align-self: flex-end;
+}
+
+
+/*R=18*/
+#pond{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*R=19*/
+#pond{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/*R=20*/
+#pond{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*R=21*/
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/*R=22*/
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+/*R=23*/
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: center;
+}
+
+/*R=24*/
+#pond{
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+    flex-direction: column-reverse;
+    align-content: space-between;
+    justify-content: center;
+
+}
+
+
+
