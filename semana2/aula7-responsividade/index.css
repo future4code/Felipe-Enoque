@@ -33,7 +33,7 @@ div {
     display: grid;
     border: 1px solid black;
     background-color: blue;
-    min-height: 9vh;
+    min-height: 11vh;
     min-width: 80vw;
     justify-items: center;
     align-items: center;
@@ -47,7 +47,7 @@ div {
     align-items: center;
     border: 1px solid black;
     background-color: yellow;
-    min-height: 9vh;
+    min-height: 11vh;
     min-width: 80vw;
 
 }
@@ -58,7 +58,7 @@ div {
     align-items: center;
     border: 1px solid black;
     background-color: green;
-    min-height: 9vh;
+    min-height: 11vh;
     min-width: 80vw;
 }
 
@@ -125,8 +125,9 @@ div {
    margin-left: 10px;
    margin-right: 10px;
    
-   grid-template-columns: 1fr 1fr ;
-   grid-template-rows: 20vw;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 15vw 15vw 15vw 15vw;
+   
    grid-row-gap: 10px;
    grid-column-gap: 10px;
  
@@ -137,7 +138,7 @@ div {
     justify-items: center;
     align-items: center;
     background-color: blue;
-    min-height: 9vh;
+    /*min-height: 9vh;*/
     /*min-width: 40vw;*/
     
 }
@@ -148,8 +149,7 @@ div {
     align-items: center;
     border: 1px solid black;
     background-color: yellow;
-    min-height: 9vh;
-    /*min-width: 40vw;*/
+    
 
 }
 
@@ -159,9 +159,7 @@ div {
     align-items: center;
     border: 1px solid black;
     background-color: green;
-    min-height: 9vh;
     grid-column-end: span 2;
-    /*min-width: 80vw;*/
 }
 
 #meblock{
@@ -173,7 +171,7 @@ div {
    margin-left: 10px;
    margin-right: 10px;
    grid-template-columns: 1fr 1fr ;
-   grid-template-rows: 99vw;
+   grid-template-rows: 60vh;
    grid-row-gap: 10px;
    grid-column-gap: 10px;
    
@@ -190,18 +188,26 @@ div {
 #fblock{
     display:grid;
     grid-row-gap: 10px;
-    min-height: 70vh;
     margin-top: 1px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 30vw;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
 }
 .white-block {
     display: grid;
     justify-items: center;
     align-items: center;
     border: 1px solid black;
-    background-color: white;
+    background-color: white;    
+}
+#ub{
+    min-height: 30vw;
+    grid-column-end: span 2;
+
 }
 }
 
@@ -214,43 +220,108 @@ div {
     background-color: red;
     min-width: 100vw;
     min-height: 10vh;
+    margin-botton: 10px;
+    
 }
 #mblock{
-   display:flex;
-   flex-flow: row wrap;
+   display:grid;
+   
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 15vw 15vw;
+   grid-row-gap: 10px;
+   grid-column-gap: 10px;
+ 
 }
 .blue-block {
+    display: grid;
+    border: 1px solid black;
+    justify-items: center;
+    align-items: center;
     background-color: blue;
-    min-height: 10vh;
-    width: 40vw;
-    justify-content: center;
+    /*min-height: 9vh;*/
+    /*min-width: 40vw;*/
+
+    
+    
 }
 
 .yellow-block {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
     background-color: yellow;
-    min-height: 10vh;
-    width: 40vw;
+    /*min-height: 9vh;*/
+    /*min-width: 40vw;*/
 
+    
 }
 
 .green-block {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
     background-color: green;
-    min-height: 10vh;
-    width: 40vw;
+    /*min-height: 9vh;*/
+    /*grid-column-end: span 2;*/
+    /*min-width: 80vw;*/
+
+    
+
 }
 
 #meblock{
-   display: flex;
+   display:grid;
+   grid-row-gap: 10px;
+   min-height: 55vh;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   grid-template-columns: 1fr 1fr ;
+   grid-template-rows: 58vh;
+   grid-row-gap: 10px;
+   grid-column-gap: 10px;
+   
 }
 .black-block {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
     background-color: black;
     color: white;
+    
 }
 #fblock{
-   display: flex;
+    display:grid;
+    grid-row-gap: 10px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 20vw;
+    
+    grid-column-gap: 10px;
 }
 .white-block {
-    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;    
+}
+#ub{
+    min-height: 9vh;
+    grid-column-end: span 2;
+
 }
 
 }
