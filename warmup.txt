@@ -1,0 +1,19 @@
+cabecalho{
+	background-color: blue;
+	color: white;
+	text-aligth: center;
+}
+corpo{
+	background-color: yelow;
+	color: black;
+	text-aligth: center;
+}
+#bomeio{
+	backgroun-color: orange;
+	color: white;	
+}
+rodape{
+	background-color: salmon;
+	backgroun-color: red;
+	color: white;	
+}
