@@ -81,11 +81,122 @@
 //Exercicio 4 :
 
 
-let name = prompt("Digite seu nome :")
-let email = prompt("Digite seu email :")
+//let name = prompt("Digite seu nome :")
+//let email = prompt("Digite seu email :")
 
 
-console.log("O e-mail " , email , " foi cadastrado com sucesso. Seja bem-vinda(o)," , name)
+//console.log("O e-mail " , email , " foi cadastrado com sucesso. Seja bem-vinda(o)," , name)
+
+
+
+
+//SEMANA3 AULA11:
+//Exercicio 1:
+
+//Pede ao usuario que digite um numero para testar e transfoma ele de String para Number
+//põe uma condicional que se o resto de uma divisão com o numero 2 for 0 ele passa no if
+//se não for zero roda o else.
+
+//Esse if vai passar a mensagem "Passou no teste" quando o numero for par
+
+//A mensagem "Passou no teste" não seráexibida em numeros impares.
+
+
+//Exercicio 2:
+
+//a.
+//Para colocar os preços nas frutas.
+
+//b.
+//O preço da fruta Maçã é R$ 2.25
+
+//c.
+//O preço da fruta Pêra é R$ 5.5 5
+
+
+//Exercicio 3:
+
+//a.
+//Está criando uma variável que não pode ser alterada depois
+//com nome numero e pede ao usuario que digite o valor dessa
+//variável e transforma de String para Number
+
+//b.
+//Se o numero for 10 mostrara "Esse número passou no teste"
+//Se for o numero -10 não aparecerá nada.
+
+//c.
+//Acontecerá um erro porque a variável de mensagem pro numero 
+//-10 está dentro do if ou seja pertence a um bloco que não permite
+//acesso externo
+
+
+//Exercícios de escrita de código
+//Exercício 4:
+
+//1. //2.
+//const idade = Number(prompt("Digite sua Idade :"))
+
+
+//3.
+//if (idade >= 18) {
+//	console.log("Você pode dirigir")
+//}else{
+//	console.log("Você não pode dirigir")
+//}
+
+
+
+
+//Exercício 5:
+//const turnE = prompt("Digite seu turno de estudo: M = Matutino; V = Vespertino; N = Noturno. :")
+
+//if (turnE === "M") {
+//	console.log("Bom Dia!")
+//}else if (turnE === "V"){
+//	console.log("Boa Tarde!")
+//}else if (turnE === "N"){
+//	console.log("Boa Noite!")
+//}else{
+//	console.log("Turno não identificado tente novamente.")
+//}
+
+//Exercício 6:
+
+//const turnE = prompt("Digite seu turno de estudo: M = Matutino; V = Vespertino; N = Noturno. :")
+
+//switch (turnE){
+//	case "M":
+//		console.log("Bom Dia!")
+//		break
+//	case "V":
+//		console.log("Boa Tarde!")
+//		break
+//	case "N":
+//		console.log("Boa Noite!")
+//		break
+//	default:
+//		console.log("Turno não identificado tente novamente.")
+//		break
+//}
+
+
+//Exercício 7:
+
+const filmG = "fantasia" && 15
+const film = prompt("Digite o genero do filme que quer assistir :")
+const prec = Number(prompt("Digite o preço do ingresso R$: "))
+
+let filmU = film && prec
+
+switch (filmU){
+	case "fantasia" && 15:
+	console.log("Bom filme")
+	break
+	default:
+	console.log("Escolha outro filme :(")
+} 
+
 
 
 
