@@ -202,12 +202,102 @@
 
 ////SEMANA3 AULA12 //////////////////////////////////////////////////////////////////////
 
+//Exercícios de interpretação:
+
+//Exercício 1:
+
+//Cria uma variavel com valor 0 abre uma estrutura de repetição do tipo for dentro 
+//cria uma variavel pra contar a repetição do loop em seguida a condição para dar 
+//continuidade ao loop depois ele soma mais 1 e dentro do for é somado mais o valor
+//da variavel criada para contar a repetição a variavel valor criada com valor zero 
+//no inicio, Fora do loop temos um comando pra mostrar no console a variavel valor.
+
+//O resultado mostrado no console é 0, porque a soma na variavel valor so pode ser 
+//acessada dentro do for.
+
+
+//Exercício 2:
+
+//a.
+//Todos os numeros do Array lista maiores que 18 um em cada linha.
+
+//b.
+//No for...of... não é permitido acessar os índices
 
 
 
+//Exercícios de escrita de código 
+
+//Exercício 3:
+
+//a.
+//const numeros = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+
+//for (let numero of numeros ) {
+//	console.log(numero)
+//}
 
 
+//b.
+//const numeros = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
+//for (let numero of numeros ) {
+//	console.log(numero / 10)
+//}
+
+
+//c.
+//const numeros = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+
+//for (let numero of numeros ) {
+//	if (numero%2 === 0) {
+//	console.log(numero)
+	
+//}
+//}
+
+
+//d.
+//const numeros = ["O elemento do índex 0 é 80" ,
+//				 "O elemento do índex 1 é 30" , 
+//				 "O elemento do índex 2 é 130" , 
+//				 "O elemento do índex 3 é 40 ", 
+//				 "O elemento do índex 4 é 60 ", 
+//				 "O elemento do índex 5 é 21 ", 
+//				 "O elemento do índex 6 é 70 ", 
+//				 "O elemento do índex 7 é 120 ", 
+//				 "O elemento do índex 8 é 90 ", 
+//				 "O elemento do índex 9 é 103 ", 
+//				 "O elemento do índex 10 é 110 ", 
+//				 "O elemento do índex 11 é 55 "]
+//
+//for (let numero of numeros ) {
+//	console.log(numero)
+//}
+
+
+//e.
+
+const numeros = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+let maxnum = 0
+let minnum =140
+
+for (let numero of numeros ) {
+	if (numero > maxnum) {
+		maxnum = numero
+	
+
+	}
+	if (numero < minnum) {
+		minnum = numero
+		
+	}
+
+
+	
+}
+	console.log(maxnum)
+	console.log(minnum)
 
 
 
