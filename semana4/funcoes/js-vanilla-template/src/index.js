@@ -342,11 +342,159 @@
 ////////////////////////////////Exercício de esscrita de código ////////////////////////////////////////////
 
 
-//Exercício 1
+//Exercício 4
+
+
+//a.
+//function poucoDeM () {
+
+//console.log("Eu sou Felipe, tenho 20 anos, moro em Fortaleza e sou estudante.")
+
+	
+//}
+//poucoDeM()
+//
+
+
+//b.
+
+
+//function sobreUS(nom , ida, cidad, booest) {
+
+//	if (booest === true) {
+//	console.log("Eu sou " , nom , ", tenho "  ,ida, " anos, moro em " ,cidad, " e sou estudante.") 
+
+//	}else{
+//	console.log("Eu sou " , nom , ", tenho "  ,ida, " anos, moro em " ,cidad, " e não sou estudante.")
+
+//	}
+	
+//}
+//sobreUS("Felipe" , 20 , "Fortaleza" , false)
+
+
+
+//Exercício 5
+
+//a.
+//function somaN(num1, num2){
+//	const soma = num1 + num2
+
+//	return soma
+//}
+
+//console.log(somaN(1, 9))
+
+
+//b.
+//function maiorI(num1, num2){
+
+//	if (num1 >= num2 ) {
+//		console.log( true )
+//	}else{
+//		console.log("Nem maior nem igual !")
+//	}
+
+
+//}
+
+//maiorI(11, 9)
+
+
+
+//c.
+//function text(text1){
+
+//	for (var i = 0; i < 10; i++) {
+
+//		console.log( text1)
+
+//	}
+//}
+//text("Ola voce esta bem ?")
 
 
 
 
+
+
+//Exercício 6
+
+
+//a.
+
+//const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+//function quantI(array){
+
+//	return array.length
+
+
+//}
+//console.log("Quantidade de itens é : " , quantI(array))
+
+
+
+
+
+//b.
+
+//function verificaN(num1){
+//	if (num1 % 2 === 0) {
+//		console.log("true")
+//
+//	}else{
+//		console.log("O numero não é par")
+//	}
+//
+//}
+//verificaN(3)
+
+
+//c.
+
+//const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+//let numPar = []
+
+
+//function verificaN(array){
+
+//	for (let numeros of array) {
+
+//		if (numeros % 2 === 0) {
+//			numPar.push(numeros)
+		 
+//		}
+
+//	}
+//return numPar
+//}
+
+
+//console.log(verificaN(array))
+
+
+//d.
+
+//const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+//let numPar = []
+
+
+//function verificaN(array){
+
+//	for (let numeros of array) {
+
+//		if (numeros % 2 === 0) {
+//			numPar.push(numeros)
+		 
+//		}
+
+//	}
+//return numPar
+//}
+
+
+//console.log(verificaN(array))
 
 
 
