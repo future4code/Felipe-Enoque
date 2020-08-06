@@ -44,3 +44,15 @@ button {
     margin: 10px;
     border-top: 3px double rgb(77, 77, 77);
 }
+#container-de-posts p{
+    text-align: center;
+}
+#container-de-posts img{
+    border: 1px dotted black;
+    padding: 1px;
+    width: 70vw;
+    margin: 10px auto;
+    display: flex;
+    
+    align-items: center;
+}

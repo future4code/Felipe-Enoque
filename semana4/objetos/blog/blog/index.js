@@ -1,9 +1,3 @@
-
-
-
-	
-
-	
 	function test(){ 
 
 		const tituloPost = document.getElementById("titulo-post")
@@ -31,34 +25,25 @@
 								<h6><p>${post.autor}</p></h6>
 								<p>${post.conteudo}</p>`
 
-	// const arrayTeste = [post.titulo, post.autor , post.conteudo]
-	// console.log(arrayTeste)
 
+	const imgPost = document.getElementById("imagem-post").value
 
-	// const arryPost = post.titulo
-	// console.log(arryPost)
-	// const arryPA = post.autor
-	// console.log(arryPA)
-	// const arryPC = post.conteudo
-	// console.log(arryPC)
+	 if (imgPost !== "") { 
+     
+     
+     if (imgPost.includes('.png') || imgPost.includes('.jpg') || imgPost.includes('.jpeg')){
+         postaPost.innerHTML += `<img src=${imgPost}>`
+     } else {
+         alert('Link incorreto! Insira imagem válida')
+     	}
+	 }
+	
 
-
-
-
-
-
-
-
-	// const testT = post.titulo
-	// console.log(testT)
-	// const testA = post.autor
-	// console.log(testA)
-	// const testC = post.conteudo
-	// console.log(testC)
 
    document.getElementById("titulo-post").value="";
    document.getElementById("autor-post").value="";
    document.getElementById("conteudo-post").value="";
+   document.getElementById("imagem-post").value="";
 
 
 	}
