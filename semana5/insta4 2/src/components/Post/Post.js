@@ -1,5 +1,5 @@
 import React from 'react'
-import './Post.css'
+import './Post.css' 
 
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 
@@ -16,9 +16,16 @@ class Post extends React.Component {
     numeroComentarios: 0
   }
 
-  onClickCurtida = () => {
+  onClickCurtida = () => {//Está sendo usada no console
     console.log('Curtiu!')
-  }
+
+    if(this.state.curtido === true){
+      this.setState({ curtido: false })
+      this.setState({numeroCurtidas: this.state.numeroCurtidas + 1})
+    }else if (this.state.curtido === false) {
+      this.setState({ curtido: true})
+    }
+    }
 
   onClickComentario = () => {
     this.setState({
@@ -26,11 +33,18 @@ class Post extends React.Component {
     })
   }
 
-  aoEnviarComentario = () => {
+  aoEnviarComentario = () => {//soma 1 no objeto acima
     this.setState({
       comentando: false,
-      numeroComentarios: this.state.numeroComentarios + 1
+     // numeroComentarios: this.state.numeroComentarios + 1
     })
+
+    if(this.state.comentando === true){
+      this.setState({ comentando: false })
+      this.setState({numeroComentarios: this.state.numeroComentarios + 1})
+    }else if (this.state.comentando === false) {
+      this.setState({ comentando: true})
+    }
   }
 
   render() {
@@ -58,9 +72,9 @@ class Post extends React.Component {
 
       <div className={'post-footer'}>
         <IconeComContador
-          icone={iconeCurtida}
-          onClickIcone={this.onClickCurtida}
-          valorContador={this.state.numeroCurtidas}
+          icone={iconeCurtida}///O coração que mostra se o usuario curtil ou não; ///Vem da condicional no inicio do render;//Vai pro prop no IconeComContadorjs
+          onClickIcone={this.onClickCurtida}//Um aviso caso o usuario click em curtir;//Vem de um evento onclick mais acima;//Vai pro prop no IconeComContadorjs
+          valorContador={this.state.numeroCurtidas}//O numeros de curtidas que recebeu o post;//Vem de um objeto;//Vai pro prop no IconeComContadorjs
         />
 
         <IconeComContador
