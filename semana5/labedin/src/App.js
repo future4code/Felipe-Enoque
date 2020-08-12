@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
+import CardPequeno from './components/CardPequeno/CardPequeno';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import foto from './img/me.jpg'
+import foto2 from './img/comb.png'
+import foto3 from './img/brasaoce.png'
 
 function App() {
   return (
@@ -9,9 +13,9 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem={foto}
+          nome="Felipe Enoque de Souza Vieira" 
+          descricao="Oi, eu sou o Felipe Enoque de Souza Vieira. Sou Técnico de informática. Adoro trabalhar com suporte tecnico de tecnologia dentre as muitas áreas de tecnologia passei a reconhecer toda a importancia e toda a beleza da área de programação.Busco adentrar na área e me aventurar entendendo a limitação humana e como a tecnologia pode quebrar isso."
         />
         
         <ImagemButton 
@@ -21,17 +25,38 @@ function App() {
       </div>
 
       <div className="page-section-container">
+        
+        <CardPequeno 
+          imagem="https://png.pngtree.com/element_our/md/20180517/md_5afd688996524.jpg"
+          nome="Email:" 
+          descricao="Enoque599@gmail.com"
+        />
+      </div>
+
+
+      <div className="page-section-container">
+        
+        <CardPequeno 
+          imagem="https://img2.gratispng.com/20180712/ugv/kisspng-computer-icons-location-clip-art-pin-location-5b46f29b710431.0425317915313762834629.jpg"
+          nome="Endereço:" 
+          descricao="Rua Canário Belga, Nº: 5000"
+          
+        />
+      </div>
+
+
+      <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          imagem={foto2} 
+          nome="Comercial Brasil Distribuidora" 
+          descricao="estágio complementar na função de Suporte de Infraestrutura" 
         />
         
         <CardGrande 
-          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem={foto3} 
+          nome="Governo do Estado do Ceará" 
+          descricao="Supervisão em laboratório de informática escolar." 
         />
       </div>
 

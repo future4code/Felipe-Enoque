@@ -1,10 +1,10 @@
 import React from 'react';
-import './CardGrande.css'
+import './CardPequeno.css'
 
 
-function CardGrande(props) {
+function CardPequeno(props) {
     return (
-        <div className="bigcard-container">
+        <div className="smallcard-container">
             <img src={ props.imagem } />
             <div>
                 <h4>{ props.nome }</h4>
@@ -14,4 +14,4 @@ function CardGrande(props) {
     )
 } 
 
-export default CardGrande;
+export default CardPequeno;
