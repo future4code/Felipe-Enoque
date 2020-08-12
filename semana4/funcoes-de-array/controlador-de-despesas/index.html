@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="controlador.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Controlador de despesas</title>
+    </head>
+    <body>
+
+        <section id="cadastro-despesas">
+
+            
+
+                <h1>Controlador de Despesa</h1>
+
+                <h3>Cadastrar despesa</h3>
+
+                    <form action="">
+
+                        <label for="valor-despesa">Valor:</label>
+                        <input type="text" id="valor-despesa" value="">
+                       <!--  <label for="desc-despesa">Descrição:</label>
+                        <input type="text" id="desc-despesa" value=""> -->
+
+
+                            <p>Tipo(Casa Viagem Rolês Outros):</p>
+                            <select name="tipo-despesa" id="tipo-despesa">
+                                
+                                <option value="tipo">Tipo de Despesa</option>    
+                                <option value="casa">Casa</option>
+                                <option value="viagem">Viagem</option>
+                                <option value="roles">Rolês</option>
+                                <option value="outros">Outros</option>
+                                    
+                            </select>
+
+                        
+                       <label for="desc-despesa">Descrição:</label>
+                        <input type="text" id="desc-despesa" value="">
+
+                    </form>
+
+                <button onclick="cadastraDespesas()">Cadastrar Despesa</button>
+            
+            
+        </section>
+
+        <section id="despesas-detalhada">
+
+
+            <h1>Despesas Detalhadas</h1>
+
+            
+
+                <form action="" id="formdd">
+
+                    
+                   <!--  <label for="tipo-despesa"> -->
+                        <p>Tipo(Casa, Viagem, Rolês , Outros):</p><!-- </label> -->
+                        <select name="tipo-despesa-detal" id="tipoDespesaDetal">
+                            <option value="tipo">Tipo Despesa</option>
+                            <option value="casa">Casa</option>
+                            <option value="viagem">Viagem</option>
+                            <option value="roles">Rolês</option>
+                            <option value="outros">Outros</option>
+                        </select>
+
+                    <label for="valor-minimo">Valor Mínimo:</label>
+                    <input type="text" id="valor-minimo" value="">
+
+                    <label for="valor-maximo">Valor Máximo:</label>
+                    <input type="text" id="valor-maximo" value="">
+
+                </form>
+
+             <button id="bfilt" onclick="funFilt()">Filtrar</button>
+             <button id="blfilt" onclick="limpFilt()">Limpar Filtros</button>
+
+             <span id="teste"></span>
+
+            
+        </section>
+
+        <section id="extrato">
+
+            <h1>Extrato </h1>
+
+            <h3>Valor Total:</h3>
+
+            <span id="extrat"></span>
+            
+        </section>
+
+    </body>
+</html>
