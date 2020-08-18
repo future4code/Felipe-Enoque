@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Etapa1 from './components/Etapa1';
+import Etapa2 from './components/Etapa2';
+import Etapa3 from './components/Etapa3';
+import Fimpro from './components/Fimpro';
+// import styled from "styled-components"
+ 
+class App extends React.Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  state = {
+
+    etapa: 1
+  };
+
+  proximo = () => {
+    this.setState({ etapa: this.state.etapa + 1 });
+  };
+
+    EtapaM = () => {
+    switch (this.state.etapa) {
+      case 1:
+        return <Etapa1 />;
+      case 2:
+        return <Etapa2 />;
+      case 3:
+        return <Etapa3 />;
+      default:
+        return <Fimpro />;
+    }
+  };
+render() {
+
+    return(
+
+      <div>
+      <div>{this.EtapaM()}</div>
+
+      
+      <p><button onClick={this.proximo()}>Próxima Etapa</button></p>
+   
+      </div>
+
+      );
+
+  }
+ 
+
 }
 
 export default App;

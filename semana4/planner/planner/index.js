@@ -73,4 +73,11 @@ function funcaoIni() {
 	document.getElementById("tarefa").value="";
 
 
-}
+ 	if (key==13){
+
+    		alert("kkkkkkk")
+ 		 }
+	
+
+
+};
