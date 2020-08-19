@@ -20,12 +20,28 @@ const InputsContainer = styled.div`
 
 class App extends React.Component {
     state = {
-      tarefas: [],
+      tarefas: [
+      			{
+					id: Date.now(), // Explicação abaixo
+					texto: 'Comer',
+					completa: false // Indica se a tarefa está completa (true ou false)
+				},
+				{
+					id: Date.now(), // Explicação abaixo
+					texto: 'Tomar banho',
+					completa: true // Indica se a tarefa está completa (true ou false)
+				},
+
+      			],
       inputValue: '',
       filtro: ''
     }
 
   componentDidUpdate() {
+
+  
+
+  	
 
   };
 
@@ -35,23 +51,55 @@ class App extends React.Component {
 
   onChangeInput = (event) => {
 
-  }
+  	this.setState({inputValue: event.target.value});
+
+  };
 
   criaTarefa = () => {
+
+  	console.log("ola " )
+
+  	const clickTarefa = {
+						id: Date.now(), 
+						texto: this.state.inputValue ,
+						completa: false 
+						}
+
+	const novaListaTarefa = [...this.state.tarefas, clickTarefa];
+
+	this.setState({tarefas: novaListaTarefa, inputValue:""});
+
+	console.log("ola " ,this.state.novaListaTarefa)
+
 
   }
 
   selectTarefa = (id) => {
 
-  }
+  	const tarefaAlterada = this.state.tarefas.map((tarefa) =>{
+
+  		if (id === tarefa.id){
+  			const novoStyTarefa = {
+  				...tarefa,
+  				completa: !tarefa.completa
+  				}
+  				return novoStyTarefa
+  			}else { 
+  				return tarefa
+  			}
+		})
+  			this.setState({tarefas: tarefaAlterada})
+	}
 
   onChangeFilter = (event) => {
+
+  	this.setState({filtro: event.target.value});
 
   }
 
   render() {
     const listaFiltrada = this.state.tarefas.filter(tarefa => {
-      switch (this.state.filter) {
+      switch (this.state.filtro) {
         case 'pendentes':
           return !tarefa.completa
         case 'completas':
