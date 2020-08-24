@@ -57,7 +57,7 @@ class App extends React.Component {
 
   criaTarefa = () => {
 
-  	console.log("ola " )
+  	
 
   	const clickTarefa = {
 						id: Date.now(), 
@@ -69,8 +69,7 @@ class App extends React.Component {
 
 	this.setState({tarefas: novaListaTarefa, inputValue:""});
 
-	console.log("ola " ,this.state.novaListaTarefa)
-
+	
 
   }
 
