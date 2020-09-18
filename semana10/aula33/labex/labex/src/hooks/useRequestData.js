@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getDataFromAPI } from "../services/requests";
+import { getDataFromAPI } from "../Services/requests";
 
 const useRequestData = (url, initialState) => {
   const [data, setData] = useState(initialState);

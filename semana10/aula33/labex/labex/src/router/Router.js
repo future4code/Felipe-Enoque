@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import AboutPage from "../screens/AboutPage/AboutPage";
-import HomePage from "../screens/HomePage/HomePage";
-import ActivityPage from "../screens/ActivityPage/ActivityPage";
+import AboutPage from "../SobrePage/AboutPage";
+import HomePage from "../Components/HomePage/HomePage";
+import ActivityPage from "../ActiviPage/ActivityPage";
+import Lista from "../Components/ListaVi/ListTripsPage"
 
 const Router = () => {
   return (
@@ -11,6 +12,9 @@ const Router = () => {
         <Route exact path="/sobre/:linguagem">
           <AboutPage />
         </Route>
+        <Route exact path="/application-form">
+          <Lista />
+        </Route>
         <Route exact path="/atividade/:id">
           <ActivityPage />
         </Route>
@@ -18,7 +22,7 @@ const Router = () => {
           <HomePage />
         </Route>
         <Route>
-          <div>Eita Giovanna, o forninho caiu (404)</div>
+          <div>Erro 404</div>
         </Route>
       </Switch>
     </BrowserRouter>
