@@ -9,7 +9,9 @@ const Conteudo = styled.div`
  
 `
 const Titulo = styled.p`
-text-align: center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 `
 
 function LoginPage() {
