@@ -1,19 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components'
+import {Conteudo, Centro, Label, Campo, Bot, Botoes, Titulo} from './StyledLogin'
 import { useHistory } from 'react-router-dom'
-
-
-
-const Conteudo = styled.div`
-  text-align:center;
-  font-size: 16px;
- 
-`
-const Titulo = styled.p`
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-`
 
 
 ////Login////////
@@ -29,11 +16,6 @@ const LoginPage = (props) => {
 
     }
 
-  
-
-
-
-
     let history = useHistory()
 
     function entrar(){
@@ -44,27 +26,45 @@ const LoginPage = (props) => {
     }
 
   return (
+    
     <Conteudo>
-      <Titulo>Login</Titulo>
+      <Centro>
+        <Titulo>Login</Titulo>
+          <p>
+            
+              <div>
+                <Label>Email: </Label>
+                <Campo
+                  name="email"
+                  value={form.email}
+                  placeholder="Digite seu E-mail"
+                  onChange={capturaDados}
+                  type="email"
+                />
+              </div>
+          </p>
 
-      <p><input
-        name="email"
-        value={form.email}
-        onChange={capturaDados}
-        type="email"
-      /></p>
-      
-      <p><input
-        name="senha"
-        value={form.senha}
-        onChange={capturaDados}
-        type="password"      
-      /></p>
+          <p>
+            
+              <div>
+                <Label>Senha: </Label>
+                <Campo
+                  name="senha"
+                  value={form.senha}
+                  placeholder="Digite a sua Senha"
+                  onChange={capturaDados}
+                  type="password"      
+                />
+              </div>
+            <Botoes>
+              <Bot onClick={entrar}>Entrar</Bot>
+              <Bot onClick={cadastrar}>Cadastrar</Bot>
+            </Botoes>          
+          </p>
+      </Centro>
 
-
-      <button onClick={entrar}>Entrar</button>
-      <button onClick={cadastrar}>Cadatrar</button>
     </Conteudo>
+    
   );
 }
 

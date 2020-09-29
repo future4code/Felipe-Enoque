@@ -10,28 +10,28 @@ import PostPage from '../Telas/PostPage/PostPage';
 function Routers() {
   return (
     <div>
-    <BrowserRouter>
-        <Switch>
-            <Route exact path="/">
-                <LoginPage/>
-            </Route>
-            <Route exact path="/Login">
-                <LoginPage/>
-            </Route>
-            <Route exact path="/cadastro">
-                <CadastroPage/>
-            </Route>
-            <Route exact path="/Feed">
-                <FeedPage/>
-            </Route>
-            <Route exact path="/Post">
-                <PostPage/>
-            </Route>
-            <Route>
-                <p>ERRO</p>
-            </Route>
-        </Switch>
-    </BrowserRouter>    
+        <BrowserRouter>
+                <Switch>
+                    <Route exact path="/">
+                        <LoginPage/>
+                    </Route>
+                    <Route exact path="/Login">
+                        <LoginPage/>
+                    </Route>
+                    <Route exact path="/cadastro">
+                        <CadastroPage/>
+                    </Route>
+                    <Route exact path="/Feed">
+                        <FeedPage/>
+                    </Route>
+                    <Route exact path="/Post">
+                        <PostPage/>
+                    </Route>
+                    <Route>
+                        <p>ERRO</p>
+                    </Route>
+                </Switch>
+        </BrowserRouter>    
     </div>
   );
 }

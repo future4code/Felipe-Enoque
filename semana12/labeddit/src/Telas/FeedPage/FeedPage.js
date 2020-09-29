@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 
 
-////////////////////Styled Component//////////////
+
 const Conteudo = styled.div`
   text-align:center;
   font-size: 16px;
@@ -12,7 +12,7 @@ const Conteudo = styled.div`
 const Titulo = styled.p`
 text-align: center;
 `
-//////////////////////////////
+
 
 
 
