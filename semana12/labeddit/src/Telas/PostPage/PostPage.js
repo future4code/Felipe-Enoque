@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
 
 
@@ -13,9 +14,18 @@ text-align: center;
 `
 
 function PostPage() {
+
+  let history = useHistory()
+
+  function voltafeed(){
+  history.push("/Feed")
+  }
+
+
   return (
     <Conteudo>
       <Titulo>Post</Titulo>
+      <button onClick={voltafeed}>Feed</button>
     </Conteudo>
   );
 }
