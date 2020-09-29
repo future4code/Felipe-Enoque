@@ -1,5 +1,5 @@
 import React from "react";
-import useRequestData from "../../hooks/useRequestData";
+import useRequestData from "../hooks/useRequestData";
 import { useParams } from "react-router-dom";
 
 const ActivityPage = () => {

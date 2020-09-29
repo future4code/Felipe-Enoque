@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { goToHomePage, goBack } from "../../router/goToPages";
+import { goToHomePage, goBack } from "../router/goToPages";
 
 const AboutPage = () => {
   const history = useHistory();
