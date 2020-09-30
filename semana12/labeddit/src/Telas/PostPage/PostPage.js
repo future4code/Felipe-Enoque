@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
-
-
+import { goToEntrar } from '../../Routers/Coordenadas';
 
 const Conteudo = styled.div`
   text-align:center;
@@ -17,15 +16,10 @@ function PostPage() {
 
   let history = useHistory()
 
-  function voltafeed(){
-  history.push("/Feed")
-  }
-
-
   return (
     <Conteudo>
       <Titulo>Post</Titulo>
-      <button onClick={voltafeed}>Feed</button>
+      <button onClick={() => goToEntrar(history)}>Feed</button>
     </Conteudo>
   );
 }

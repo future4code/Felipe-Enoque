@@ -48,8 +48,9 @@ export const Bot = styled.button`
     justify-content: center;
     align-items: center;
     color: white;
-    background: #ff414f;
-    :hover{background: #ff2735af;}
+    background: #FF5252;
+    :hover{box-shadow: inset 6px 6px 12px #C94040,inset -6px -6px 12px #FF5252;}
+    outline: none;
 `
 
 export const Botoes = styled.div`

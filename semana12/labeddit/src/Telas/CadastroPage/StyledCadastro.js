@@ -66,5 +66,6 @@ export const Bot = styled.button`
     align-items: center;
     color: white;
     background: #ff414f;
-    :hover{background: #ff2735af;}
+    :hover{box-shadow: inset 6px 6px 12px #C94040,inset -6px -6px 12px #FF5252;}
+    outline: none;
 `
