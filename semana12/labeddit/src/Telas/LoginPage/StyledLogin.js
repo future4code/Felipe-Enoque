@@ -22,6 +22,11 @@ export const Centro = styled.div`
     border-radius: 50px;
 
 `
+export const Loim = styled.img`
+    max-height: 30%;
+    max-width: 20%;
+
+`
 export const Label = styled.label`
     margin-right: 10px;
     
@@ -48,24 +53,26 @@ export const Bot = styled.button`
     justify-content: center;
     align-items: center;
     color: white;
-    background: #FF5252;
+    background: #e44949;
     :hover{box-shadow: inset 6px 6px 12px #C94040,inset -6px -6px 12px #FF5252;}
     outline: none;
 `
 
 export const Botoes = styled.div`
-    
     display: flex;
     justify-content: center;
     align-items: center;
 
 `
-
-
 export const Titulo = styled.p`
     font-size: 30px;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    
+`
+export const Cria = styled.p`
+    color: #e44949;    
+    :hover{background:#e44949; color: white;}
     
 `

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { goToEntrar, goToLogin } from '../../Routers/Coordenadas';
-import { Menu, Ol, Li, A } from './StyledMenu'
+import { Menu, Boto } from './StyledMenu'
 
 const MenuSuperiorPage = () =>{
 
@@ -9,10 +9,8 @@ const MenuSuperiorPage = () =>{
 
    return(
         <Menu>
-            <Ol>
-                <Li><A onClick={() => goToEntrar(history)}>Labbedin</A></Li>
-                <Li><A onClick={() => goToLogin(history)}>Sair</A></Li>
-            </Ol>
+            <Boto onClick={() => goToEntrar(history)}>Labbedin</Boto>
+            <Boto onClick={() => goToLogin(history)}>Sair</Boto>
         </Menu>
     )
 }

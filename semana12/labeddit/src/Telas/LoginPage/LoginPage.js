@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import {Conteudo, Centro, Label, Campo, Bot, Botoes, Titulo} from './StyledLogin'
+import {Conteudo, Centro, Label, Campo, Bot, Botoes, Loim, Cria} from './StyledLogin'
+import Logoim from "../../Arquivos/Logo.png"
 import { useHistory } from 'react-router-dom'
 import { goToEntrar, goToCadastrar } from '../../Routers/Coordenadas'
+import { Login } from '../../Services/requis';
 
 const LoginPage = (props) => {
   
-    const [form, setForm ] = useState({email: "", senha: ""})
+    const [form, setForm ] = useState({email: "", password: ""})
 
     const capturaDados = (evento) =>{
 
@@ -13,46 +15,54 @@ const LoginPage = (props) => {
         setForm({...form, [name]: value})
     }
 
+    const entrarConta = (event) => {
+      event.preventDefault()
+      const elemento = document.getElementById("login_key")
+      const valido = elemento.checkValidity()
+      elemento.reportValidity()
+          if(valido){
+            Login(form)
+          }
+
+      
+    }
+
     let history = useHistory()
   return (    
         <Conteudo>
           <Centro>
-            <Titulo>Login</Titulo>
-              <p>
-                
-                  <div>
-                    <Label>Email: </Label>
-                    <Campo
-                      name="email"
-                      value={form.email}
-                      placeholder="Digite seu E-mail"
-                      onChange={capturaDados}
-                      type="email"
-                    />
-                  </div>
+            <Loim alt={"Logokk"} src={Logoim} />
+             <form id="login_key"> 
+               <p>
+                  <Label>Email: </Label>
+                  <Campo
+                   name="email"
+                   value={form.email}
+                   placeholder="Digite seu E-mail"
+                   onChange={capturaDados}
+                   type="email"
+                  />                  
               </p>
-
-              <p>
-                
-                  <div>
-                    <Label>Senha: </Label>
-                    <Campo
-                      name="senha"
-                      value={form.senha}
-                      placeholder="Digite a sua Senha"
-                      onChange={capturaDados}
-                      type="password"      
-                    />
-                  </div>
+              <p>              
+                  <Label>Senha: </Label>
+                  <Campo
+                   name="password"
+                   value={form.password}
+                   placeholder="Digite a sua Senha"
+                   onChange={capturaDados}
+                   type="password"      
+                  />
+              </p>
                 <Botoes>
-                  <Bot onClick={() => goToEntrar(history)}>Entrar</Bot>
-                  <Bot onClick={() => goToCadastrar(history)}>Cadastrar</Bot>
-                </Botoes>          
-              </p>
+                  <Bot type={"submit"} onClick={entrarConta}>Entrar</Bot>
+                </Botoes>
+              </form>
+
+              <Cria onClick={() => goToCadastrar(history)}>Criar conta</Cria>
           </Centro>
 
         </Conteudo>
       );
 }
-
+/*() => goToEntrar(history)*/
 export default LoginPage;
