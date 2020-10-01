@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import {Conteudo, Centro, Label, Campo, Bot, Botoes, Titulo} from './StyledCadastro'
 import { useHistory } from 'react-router-dom'
 import { goToEntrar, goToLogin } from '../../Routers/Coordenadas'
+import { Cadastro } from '../../Services/requis';
+import { AutenticaLogin } from '../../Hooks/autenticacaoPage';
 
 const CadastroPage = (props) => {
 
-  const [form, setForm ] = useState({nome: "", email: "", senha: ""})
+  AutenticaLogin()
+
+  const [form, setForm ] = useState({email: "", password: "", username: ""})
 
   const capturaCadastro = (evento) =>{
 
@@ -14,28 +18,32 @@ const CadastroPage = (props) => {
   }
   let history = useHistory()
 
+  const cadastroConta = (event) => {
+    event.preventDefault()
+    const elemento = document.getElementById("cad_new")
+    const valido = elemento.checkValidity()
+    elemento.reportValidity()
+        if(valido){
+          Cadastro(form, history, props.setBotaoSair)
+        }
+  }
+
   return (
     <Conteudo>
       <Centro>
-        <Titulo>Pagina Cadastro</Titulo>
-
-        <p>
-          
-            <div>
+        <Titulo>Cadastre-se</Titulo>
+          <form id="cad_new">
+            <p>
               <Label>Nome: </Label>
               <Campo
-                name="nome"
-                value={form.name}
+                name="username"
+                value={form.username}
                 placeholder="Digite seu Nome"
                 onChange={capturaCadastro}
                 type="text"
               />
-            </div>
-        </p>
-
-        <p>
-          
-            <div>
+            </p>
+            <p>
               <Label>Email: </Label>
               <Campo
                 name="email"
@@ -44,27 +52,22 @@ const CadastroPage = (props) => {
                 onChange={capturaCadastro}
                 type="email"
               />
-            </div>
-        </p>
-
-        <p>
-          
-            <div>
+            </p>
+            <p>
               <Label>senha: </Label>
               <Campo
-                name="senha"
-                value={form.senha}
+                name="password"
+                value={form.password}
                 placeholder="Digite a sua Senha"
                 onChange={capturaCadastro}
                 type="password"      
               />
-            </div>
-        </p>
-
-        <Botoes>
-          <Bot onClick={() => goToEntrar(history)}>Criar</Bot>
-          <Bot onClick={() => goToLogin(history)}>login</Bot>
-        </Botoes>
+            </p>
+          <Botoes>
+            <Bot onClick={cadastroConta}>Criar</Bot>
+            <Bot onClick={() => goToLogin(history)}>login</Bot>
+          </Botoes>
+          </form>
       </Centro>
     </Conteudo>
   );

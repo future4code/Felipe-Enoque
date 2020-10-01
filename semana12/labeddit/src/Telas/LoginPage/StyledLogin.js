@@ -72,7 +72,8 @@ export const Titulo = styled.p`
     
 `
 export const Cria = styled.p`
-    color: #e44949;    
+    color: #e44949;
+    outline: none; 
     :hover{background:#e44949; color: white;}
     
 `

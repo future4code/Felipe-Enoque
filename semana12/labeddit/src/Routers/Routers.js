@@ -6,7 +6,7 @@ import LoginPage from '../Telas/LoginPage/LoginPage';
 import PostPage from '../Telas/PostPage/PostPage';
 import ErroPage  from '../Telas/ErroPage/ErroPage';
 
-const Routers = () => {
+const Routers = (props) => {
   return (
     <div>
         <Switch>
@@ -14,10 +14,10 @@ const Routers = () => {
                 <LoginPage/>
             </Route>
             <Route exact path="/Login">
-                <LoginPage/>
+                <LoginPage setBotaoSair={props.setBotaoSair}/>
             </Route>
             <Route exact path="/cadastro">
-                <CadastroPage/>
+                <CadastroPage setBotaoSair={props.setBotaoSair}/>
             </Route>
             <Route exact path="/Feed">
                 <FeedPage/>

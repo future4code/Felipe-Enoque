@@ -4,9 +4,12 @@ import Logoim from "../../Arquivos/Logo.png"
 import { useHistory } from 'react-router-dom'
 import { goToEntrar, goToCadastrar } from '../../Routers/Coordenadas'
 import { Login } from '../../Services/requis';
+import { AutenticaLogin } from '../../Hooks/autenticacaoPage';
 
 const LoginPage = (props) => {
   
+    AutenticaLogin()
+
     const [form, setForm ] = useState({email: "", password: ""})
 
     const capturaDados = (evento) =>{
@@ -21,10 +24,8 @@ const LoginPage = (props) => {
       const valido = elemento.checkValidity()
       elemento.reportValidity()
           if(valido){
-            Login(form)
+            Login(form, history, props.setBotaoSair)
           }
-
-      
     }
 
     let history = useHistory()
