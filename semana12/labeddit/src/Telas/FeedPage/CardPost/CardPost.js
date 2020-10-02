@@ -1,5 +1,7 @@
 import React from 'react'
-import { Card, CardBot, CardNameU, Coment, Deslike, Like, Post, ReacBot } from './StyledCardPost'
+import { Card, CardBot, CardNameU, Coment, Deslike, Like, Post, ReacBot, Numeros } from './StyledCardPost'
+import iconLike from '../../../Arquivos/iconLike.png'
+import iconDeslike from '../../../Arquivos/iconDeslike.png'
 
 export const CardPost = (props) => {
 
@@ -9,11 +11,16 @@ export const CardPost = (props) => {
         <Post>{props.Post}</Post>
         <CardBot>
             <ReacBot>
-                <Like>{props.Like}</Like>
-                <Deslike>{props.Deslike}</Deslike>
+                {/* <Like >{props.Like}</Like> */}
+                <Like alt={"Like"} src={iconLike} />
+                <Numeros>{props.Numeros}</Numeros>
+                {/* <Deslike>{props.Deslike}</Deslike> */}
+                <Deslike alt={"Deslike"} src={iconDeslike}/>
             </ReacBot>
-        
-            <Coment>{props.Coment}</Coment>
+            {/* <div> */}
+                
+                <Coment>Comentários: {props.Coment}</Coment>
+            {/* </div> */}
         </CardBot>
     </Card>
         )

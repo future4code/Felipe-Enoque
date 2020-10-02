@@ -4,7 +4,7 @@ export const Conteudo = styled.div`
     margin: 0;
     padding: 0;
     flex-direction: column;
-    background: #eeeeee;
+    background:#eeeeee;
     /* width: 100%;  */
     display: flex;
     justify-content: center;
@@ -15,4 +15,12 @@ export const Conteudo = styled.div`
     /* position: absolute ; */
 
 ` 
+export const Loadin = styled.img`
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background: #eeeeee;
+    
+
+`
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Conteudo } from './StyledFeed'
+import { Conteudo, Loadin } from './StyledFeed'
 // import { useHistory } from 'react-router-dom'
 import { Autentica } from '../../Hooks/autenticacaoPage';
 import { CardPost } from './CardPost/CardPost';
 import axios from 'axios';
+// import Loadin from '../Loadin/Loadin'
+import Load from '../../Arquivos/loading.gif'
 
 const FeedPage = (props) => {
 
@@ -11,6 +13,7 @@ const FeedPage = (props) => {
     Autentica()
 
     const [postagens, setPostagens] = useState([])
+    
 
     // let history = useHistory()
 
@@ -24,6 +27,7 @@ const FeedPage = (props) => {
         
         setPostagens(Response.data.posts)
 
+
       }).catch((erro) =>{
          console.log(erro)
           alert("Erro pfvr tente novamente")
@@ -33,19 +37,24 @@ const FeedPage = (props) => {
 
     
 
-    const MostraPa = () => {
+    const MostraPa = (item) => {
+
+      // Like=(item.userVoteDirection)
+      // Deslike=(item.votesCount)
+      // let Soma=Like-Deslike
 
     return(
+      
 
       postagens.map((item) => {
         return(
-                <CardPost 
+                <CardPost
                   key={item.id}
-                  onClick={()=> null}
                   CardNameU={item.title} 
                   Post={item.text}
-                  Like={item.userVoteDirection}
-                  Deslike={item.votesCount}
+                  // Like={item.userVoteDirection}
+                  // Deslike={item.votesCount}
+                  Numeros={item.userVoteDirection-item.votesCount}
                   Coment={item.commentsCount}
                 />
               );
@@ -57,7 +66,7 @@ const FeedPage = (props) => {
 
       <Conteudo>
         
-        {MostraPa()}
+        {postagens.length > 0 ? MostraPa() : <Loadin alt={"Load"} src={Load} />}
 
       </Conteudo>
 

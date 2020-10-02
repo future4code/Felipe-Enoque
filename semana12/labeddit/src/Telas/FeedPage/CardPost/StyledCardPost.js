@@ -23,7 +23,7 @@ export const CardNameU = styled.h2`
     align-items:flex-start;
 `
 export const Post = styled.div`
-
+    
 `
 export const CardBot = styled.div`
     display: flex;
@@ -37,12 +37,26 @@ export const ReacBot = styled.div`
     display: inline-flex;
     flex-direction: row;
     align-self:flex-start;
+    text-align:center;
 `
-export const Like = styled.button`
+export const Like = styled.img`
+    width: 2vw;
+    height: 4vh;
+    /* border-radius: 20px; */ 
+
     
 `
-export const Deslike = styled.button`
+export const Numeros = styled.p`
+     width: 2vw;
+     margin-top:0px;
+     margin-bottom:0px;
+     align-self:center;
+    /* height: 5vh;  */
     
+`
+export const Deslike = styled.img`
+    width: 2vw;
+    height: 4vh;
 `
 export const Coment = styled.div`
     display: inline;
