@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Conteudo, Centro, Label, Campo, Bot, Botoes, Titulo} from './StyledCadastro'
 import { useHistory } from 'react-router-dom'
-import { goToEntrar, goToLogin } from '../../Routers/Coordenadas'
+import { goToLogin } from '../../Routers/Coordenadas'
 import { Cadastro } from '../../Services/requis';
 import { AutenticaLogin } from '../../Hooks/autenticacaoPage';
 

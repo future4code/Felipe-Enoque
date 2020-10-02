@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Menu = styled.div`
+    position:relative;
     min-height:10vh;
     background: #e44949;
     display: flex;

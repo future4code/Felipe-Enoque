@@ -1,11 +1,18 @@
 import styled from 'styled-components'
 
-
 export const Conteudo = styled.div`
-    text-align:center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background: #eeeeee;
+    /* width: 100%;  */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     font-size: 16px;
-  
-`
-export const Titulo = styled.p`
-    text-align: center;
-`
+
+    /* height: 100%;  */
+    /* position: absolute ; */
+
+` 
+

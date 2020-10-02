@@ -1,25 +1,72 @@
-import React, { useEffect, useLayoutEffect } from 'react';
-import { Conteudo, Titulo } from './StyledFeed'
-import { useHistory } from 'react-router-dom'
-import { goToLogin , goToPost } from '../../Routers/Coordenadas';
+import React, { useEffect, useState } from 'react';
+import { Conteudo } from './StyledFeed'
+// import { useHistory } from 'react-router-dom'
 import { Autentica } from '../../Hooks/autenticacaoPage';
+import { CardPost } from './CardPost/CardPost';
+import axios from 'axios';
 
-function FeedPage() {
+const FeedPage = (props) => {
 
-  Autentica()
+  
+    Autentica()
 
-    let history = useHistory()
+    const [postagens, setPostagens] = useState([])
 
+    // let history = useHistory()
+
+    useEffect(() =>{
+      axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labEddit/posts
+      `, {
+        headers:{
+                  Authorization: localStorage.getItem('token') 
+                }
+      }).then((Response) => {
+        
+        setPostagens(Response.data.posts)
+
+      }).catch((erro) =>{
+         console.log(erro)
+          alert("Erro pfvr tente novamente")
+        })
+        
+    }, [])
 
     
 
-  return (
-    <Conteudo>
-        <Titulo>Feed</Titulo>
-        <button onClick={() => goToPost(history)}>Post</button>
+    const MostraPa = () => {
+
+    return(
+
+      postagens.map((item) => {
+        return(
+                <CardPost 
+                  key={item.id}
+                  onClick={()=> null}
+                  CardNameU={item.title} 
+                  Post={item.text}
+                  Like={item.userVoteDirection}
+                  Deslike={item.votesCount}
+                  Coment={item.commentsCount}
+                />
+              );
+        })
+      );
+    }
+
+    return(
+
+      <Conteudo>
         
-    </Conteudo>
-  );
+        {MostraPa()}
+
+      </Conteudo>
+
+
+    );
+
+
+
+  
 }
 
 export default FeedPage;

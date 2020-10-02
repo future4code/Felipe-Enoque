@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Conteudo, Centro, Label, Campo, Bot, Botoes, Loim, Cria} from './StyledLogin'
 import Logoim from "../../Arquivos/Logo.png"
 import { useHistory } from 'react-router-dom'
-import { goToEntrar, goToCadastrar } from '../../Routers/Coordenadas'
+import { goToCadastrar } from '../../Routers/Coordenadas'
 import { Login } from '../../Services/requis';
 import { AutenticaLogin } from '../../Hooks/autenticacaoPage';
 
