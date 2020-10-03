@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Routers from './Routers/Routers';
 import { BrowserRouter } from 'react-router-dom'
 import MenuSuperiorPage from './Telas/Menu/MenuSuperiorPage';
 
-const Body = styled.body`
-  background: #eeeeee;
-`
 
 function App() {
 
@@ -14,7 +11,7 @@ function App() {
   const [botaoSair, setBotaoSair] = useState(token ? 'Sair':'Entrar')
 
   return (
-    <Body>
+    <div>
       <BrowserRouter>
            
            <MenuSuperiorPage botaoSair={botaoSair} setBotaoSair={setBotaoSair} />
@@ -22,7 +19,7 @@ function App() {
             <Routers setBotaoSair={setBotaoSair}/>
             
       </BrowserRouter>
-    </Body>
+    </div>
   );
 }
 

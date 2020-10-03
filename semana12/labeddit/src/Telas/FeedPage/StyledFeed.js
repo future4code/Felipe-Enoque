@@ -11,7 +11,7 @@ export const Conteudo = styled.div`
     align-items: flex-start;
     font-size: 16px;
 
-    /* height: 100%;  */
+    min-height: 100%; 
     /* position: absolute ; */
 
 ` 
