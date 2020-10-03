@@ -2,10 +2,15 @@ import React, { useEffect, useState }  from 'react';
 import iconLike from '../../Arquivos/iconLike.png'
 import iconDeslike from '../../Arquivos/iconDeslike.png'
 import { Card, CardBot, CardNameU, Coment, Deslike, Like, Numeros, Post, ReacBot} from './StyledPostDet';
+import { goToEntrar } from '../../Routers/Coordenadas';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
  
  export const CardPostDet = (props) =>{
-        
+
+    const history = useHistory()
+
+            
     return(
                     <Card>
                         <CardNameU>{props.Titulo}</CardNameU>
@@ -21,5 +26,6 @@ import { Card, CardBot, CardNameU, Coment, Deslike, Like, Numeros, Post, ReacBot
                     </Card>
                     
         );
+    
 
 }
