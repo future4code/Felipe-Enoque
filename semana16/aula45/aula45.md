@@ -19,72 +19,146 @@ d).
 
 
 ### Exercício 2
-a)
+a).
+    UPDATE Actor
+    SET name = "Antonio Fagundes", 
+    WHERE id = "003"
 
-b)
 
-c)
+b).
+    UPDATE Actor
+    SET name="JULIANA PÃES"
+    WHERE id = "005";
 
-d)
+    UPDATE Actor
+    SET name="Juliana Paes"
+    WHERE id = "005";
+
+
+c).
+    UPDATE Actor
+    SET name = "Juliana Paes",
+    salary = 800000,
+    birth_date = "1979-03-26",
+    gender = "female"
+    WHERE id = "005";
+
+
+d).
+    UPDATE Actor
+    SET name = "kkkkkk"
+    WHERE id = "098709805";
+
+    RESULTADO:	0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0	0,051 sec
+
+    JUSTIFICATIVA: O COMANDO ESTÁ CORRRETO, MAS ELE NÃO INFLUENCIOU EM NEM UMA MUDANÇA NÃO DEU ERRO PORQUE O COMANDO FOI RECONHECIDO, MAS NÃO HAVIA CORDENADAS VALIDAS DO LOCAL DE MUDANÇA POR ISSO NÃO MUDOU NADA;
+
 
 
 ### Exercício 3
-a)
+a).
+    DELETE FROM Actor WHERE name = "Fernanda Montenegro";
 
-b)
+b).
+    DELETE FROM Actor WHERE (gender = "male" AND salary > 100000000);
 
 
 ### Exercício 4
-a)
+a).
+    SELECT MAX(salary) FROM Actor;
 
-b)
+b).
+    SELECT MAX(salary) FROM Actor WHERE gender = "female";
 
-c)
+c).
+    SELECT COUNT(*) FROM Actor WHERE gender = "female";
 
-d) 
+d).
+    SELECT SUM(salary) FROM Actor;
 
 ### Exercício 5
-a)
+a).
+    SELECT COUNT(*), gender
+    FROM Actor
+    GROUP BY gender;
 
-b)
+    EXPLICAÇÃO: O RESULTADO DESSA QUERY É QUE ELA PEDE PRA QUE APAREÇAM OS ATORES DE ACORDO COM OS TIPOS DE GENEROS OU SEJA COMO TEMOS 2 TERAM DOIS RESUGLTADOS UM CORRESPONDENDO A CADA GENERO;
 
-c)
+b).
+    SELECT id, name FROM Actor ORDER BY name DESC;
 
-d)
+c).
+    SELECT name, salary FROM Actor ORDER BY salary DESC;
 
-e)
+d).
+    SELECT name, salary FROM Actor ORDER BY salary DESC LIMIT 3;
+
+e).
+    SELECT AVG(salary) FROM Actor WHERE gender="male";
 
 
 
 ### Exercício 6
-a)
+a).
+    ALTER TABLE Filmes
+    ADD playing_limit_date DATE;
 
-b)
+b).
+    ALTER TABLE Filmes
+    CHANGE avaliacao avaliacao boolean;
 
-c)
+c).
+    UPDATE Filmes 
+    SET date_lancamento= "2021-01-14", playing_limit_date= "2021-01-30" WHERE id= '001';
 
-d)
+    UPDATE Filmes 
+    SET date_lancamento= "2012-02-24", playing_limit_date= "2012-05-25" WHERE id= '002';
+
+d).
+    DELETE FROM Filmes WHERE id = "003";
+
+    UPDATE Filmes 
+    SET sinopse= "kkkkkkk ou kkkkkk" WHERE id = "003";
+
+    RESULTADO: DEU CERTO, MAS NÃO APARECEU DEPOIS QUANDO DEU O COMANDO PARA MOSTRAR TODOS NÃO SEI PORQUE .
+
+
  
 
 ### Exercício 7
-a)
+a).
+    SELECT COUNT(*) FROM Filmes WHERE avaliacao > 7.5;
 
-b)
+b).
+    SELECT AVG(avaliacao) FROM Filmes;
 
-c)
+c).
+    SELECT COUNT(*) FROM Filmes WHERE playing_limit_date > CURDATE();
 
-d)
+d).
+    SELECT COUNT(*) FROM Filmes WHERE release_date < CURDATE();
 
-e)
+e).
+    SELECT MAX(avaliacao) FROM Filmes;
 
-f)
+f).
+    SELECT MIN(avaliacao) FROM Filmes;
 
 
 ### Exercício 8
-a)
+a).
+    SELECT * FROM Filmes ORDER BY name;
 
-b)
+b).
+    SELECT * FROM Filme ORDER BY name LIMIT 5;
 
-c)
+c).
+    SELECT * FROM Filmes 
+    WHERE release_date < CURDATE() 
+    ORDER BY release_date DESC 
+    LIMIT 3;
 
-d)
+d).
+    SELECT * FROM Movie 
+    ORDER BY rating DESC 
+    LIMIT 3;
